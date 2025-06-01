@@ -1,0 +1,29 @@
+# Flask
+FLASK_APP=main.py
+FLASK_ENV=development
+SECRET_KEY=88Ozilkoffi190@c17e45bd93fa8210b6f4d7ea92c30afb
+
+# Supabase
+SUPABASE_URL=https://nhnfhiedhyefzptfcpsg.supabase.co
+SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5obmZoaWVkaHllZnpwdGZjcHNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcyMzc1NTgsImV4cCI6MjA2MjgxMzU1OH0.BeLKJDvVtaX1fVsUtaf0CZalgKs9x429uR1JYXVS3pU
+
+# PayDunya (remplace avec tes vraies clés en production)
+PAYDUNYA_API_KEY=ta-cle-api-private
+PAYDUNYA_PUBLIC_KEY=votre_public_key
+PAYDUNYA_PRIVATE_KEY=votre_private_key
+PAYDUNYA_MASTER_KEY=votre_master_key
+
+# Paramètres métiers
+MONTANT_COTATION=2000
+NOMBRE_FILLEULS_MAX=4
+POURCENTAGE_REPARTITION=0.10
+
+# Paramètres de retrait
+RETRAIT_MIN=1500
+RETRAIT_MAX=255000
+RETRAIT_MAX_PAR_JOUR=4
+
+# Email administrateur
+ADMIN_EMAIL=ozileudes1@gmail.com
+
+Base toi sur mon fichier .env pour me donner un exemple plus précis
