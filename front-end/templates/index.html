@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FORTUNE PLUS</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Accueil - Proparieur Fortune</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <div class="container">
-    <h1>SURBET ET FORTUNE GARANTIE</h1>
-    <p class="subtitle">ARBITRAGE + STRATÉGIES, c'est la FORTUNE qui S'IMPOSE À NOUS</p>
-    <div class="footer">
-      <p>Signée par <strong>OZILEUDES Business</strong> - © Koffi Koffi Jean Eudes</p>
-      <p>Contact : <a href="mailto:parieurspros1@gmail.com">parieurspros1@gmail.com</a></p>
+    <div class="hero">
+        <div class="overlay">
+            <h1>🚀 Bienvenue sur <span class="highlight">Proparieur Fortune</span></h1>
+            <p>Votre portail vers la fortune à travers le pari intelligent</p>
+            <a class="btn" href="{{ url_for('login') }}">🎯 Se connecter</a>
+        </div>
     </div>
-  </div>
 </body>
 </html>
