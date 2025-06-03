@@ -18,7 +18,7 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
-# MODELES (exemples simples, à adapter)
+# MODELES
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(150), unique=True, nullable=False)
@@ -44,7 +44,7 @@ def load_user(user_id):
 # ROUTES
 @app.route('/')
 def index():
-    return "Bienvenue sur Proparieur Fortune"
+    return render_template('index.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
