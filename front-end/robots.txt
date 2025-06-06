@@ -1,0 +1,16 @@
+User-agent: *
+Disallow: /dashboard
+Disallow: /dashboard_admin
+Disallow: /profil
+Disallow: /retrait
+Disallow: /paiement
+Disallow: /arborescence
+Disallow: /formation
+Disallow: /objectifs
+Disallow: /surbets
+
+Allow: /index.html
+Allow: /login.html
+Allow: /register.html
+
+Sitemap: https://tonsite.netlify.app/sitemap.xml
