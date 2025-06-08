@@ -1,0 +1,21 @@
+{
+  "title": "Bienvenue sur FORTUNE PLUS",
+  "login": "Connexion",
+  "register": "Inscription",
+  "dashboard": "Tableau de bord",
+  "logout": "Déconnexion",
+  "welcome_user": "Bienvenue, utilisateur",
+  "your_network": "Votre Réseau",
+  "monthly_cotation": "Cotation Mensuelle",
+  "deposit": "Faire un dépôt",
+  "withdraw": "Faire un retrait",
+  "surbets_today": "SURBET du jour",
+  "announcements": "Annonces",
+  "objectives": "Objectifs",
+  "training": "Formation",
+  "profile": "Profil",
+  "admin_dashboard": "Tableau Admin",
+  "language": "Langue",
+  "french": "Français",
+  "english": "Anglais"
+}
