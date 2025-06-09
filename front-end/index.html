@@ -1,17 +1,101 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Accueil - Proparieur Fortune</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="page_title">Fortune Plus</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <link rel="icon" href="assets/images/logo.png" />
+  <link rel="manifest" href="/assets/manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icon-192.png">
+  <meta name="theme-color" content="#ff8000">
 </head>
 <body>
-    <div class="hero">
-        <div class="overlay">
-            <h1>🚀 Bienvenue sur <span class="highlight">Proparieur Fortune</span></h1>
-            <p>Votre portail vers la fortune à travers le pari intelligent</p>
-            <a class="btn" href="{{ url_for('login') }}">🎯 Se connecter</a>
-        </div>
+
+  <header class="header">
+    <div class="logo-container">
+      <img src="assets/images/logo.png" alt="Logo Fortune Plus" class="logo" />
+      <h1 class="site-title" data-i18n="site_title">Fortune Plus</h1>
     </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html" data-i18n="home">Accueil</a></li>
+        <li><a href="login.html" data-i18n="login">Connexion</a></li>
+        <li><a href="register.html" data-i18n="register">Inscription</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="hero-section">
+      <h2 data-i18n="hero_title">Bienvenue sur Fortune Plus</h2>
+      <p data-i18n="hero_text">Transformez vos connexions en opportunités réelles grâce à notre système MLM sécurisé.</p>
+      <a href="surbets.html" class="cta-button" data-i18n="cta_button">SURBET DU JOUR</a>
+    </section>
+
+    <section class="features">
+      <div class="feature-card">
+        <h3 data-i18n="feature1_title">Cotation mensuelle</h3>
+        <p data-i18n="feature1_text">Payez seulement 2000 FCFA pour accéder à toutes les fonctionnalités.</p>
+      </div>
+      <div class="feature-card">
+        <h3 data-i18n="feature2_title">Parrainage intelligent</h3>
+        <p data-i18n="feature2_text">4 filleuls directs, redistribution automatique sur 6 niveaux.</p>
+      </div>
+      <div class="feature-card">
+        <h3 data-i18n="feature3_title">Retraits rapides</h3>
+        <p data-i18n="feature3_text">Minimum 1000 FCFA, jusqu’à 250 000 FCFA, jusqu’à 4 fois par jour.</p>
+      </div>
+    </section>
+
+    <section class="infos">
+      <h3 data-i18n="help_title">Besoin d'aide ?</h3>
+      <p data-i18n="help_text">Contactez l’administrateur à <a href="mailto:ozileudes1@gmail.com">ozileudes1@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <label for="lang-switcher" data-i18n="choose_lang">Choisir la langue :</label>
+    <select id="lang-switcher">
+      <option value="fr">🇫🇷 Français</option>
+      <option value="en">🇬🇧 English</option>
+      <option value="ar">🇸🇦 العربية</option>
+    </select>
+    <p>&copy; 2025 <span data-i18n="site_title">Fortune Plus</span> — <span data-i18n="rights">Tous droits réservés.</span></p>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script src="https://unpkg.com/i18next@23.4.6/i18next.min.js"></script>
+  <script src="https://unpkg.com/i18next-http-backend@2.2.2/i18nextHttpBackend.min.js"></script>
+  <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.2/i18nextBrowserLanguageDetector.min.js"></script>
+
+  <script>
+    i18next
+      .use(i18nextHttpBackend)
+      .use(i18nextBrowserLanguageDetector)
+      .init({
+        fallbackLng: 'fr',
+        debug: true,
+        backend: {
+          loadPath: '/locales/{{lng}}.json'
+        }
+      }, function(err, t) {
+        updateContent();
+      });
+
+    function updateContent() {
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        const key = el.getAttribute('data-i18n');
+        el.innerHTML = i18next.t(key);
+      });
+    }
+
+    document.getElementById('lang-switcher').addEventListener('change', function() {
+      i18next.changeLanguage(this.value, updateContent);
+    });
+  </script>
+
 </body>
-</html>
+    </html>
